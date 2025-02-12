@@ -7,6 +7,10 @@ GLUROO_API = os.getenv("G2N_GLUROO_API_URL")
 NIGHTSCOUT_API = os.getenv("G2N_NIGHTSCOUT_URL")
 TOKEN = os.getenv("G2N_TOKEN")
 
+print(f"G2N_GLUROO_API_URL: {G2N_GLUROO_API_URL}")
+print(f"G2N_NIGHTSCOUT_URL: {G2N_NIGHTSCOUT_URL}")
+print(f"G2N_TOKEN: {G2N_TOKEN}")
+
 # Error message mapping
 ERROR_MESSAGES = {
     400: "Error 400: Bad request (check data format). ❌",
