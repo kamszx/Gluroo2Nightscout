@@ -3,9 +3,9 @@ import time
 import os
 
 # API Configuration
-G2N_GLUROO_API_URL = os.getenv("GLUROO_API_URL")
-G2N_NIGHTSCOUT_URL = os.getenv("NIGHTSCOUT_URL")
-G2N_TOKEN = os.getenv("TOKEN")
+G2N_GLUROO_API_URL = os.getenv("G2N_GLUROO_API_URL")
+G2N_NIGHTSCOUT_URL = os.getenv("G2N_NIGHTSCOUT_URL")
+G2N_TOKEN = os.getenv("G2N_TOKEN")
 
 # Error message mapping
 ERROR_MESSAGES = {
@@ -19,7 +19,7 @@ ERROR_MESSAGES = {
 def fetch_glucose_data():
     """Fetches data from Gluroo"""
     try:
-        response = requests.get(GLUROO_API_URL)
+        response = requests.get(G2N_GLUROO_API_URL)
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
@@ -29,7 +29,7 @@ def fetch_glucose_data():
 def send_to_nightscout(data):
     """Sends glucose data to Nightscout"""
     try:
-        response = requests.post(NIGHTSCOUT_API, json=data, headers={"api-secret": TOKEN})
+        response = requests.post(G2N_NIGHTSCOUT_URL, json=data, headers={"api-secret": G2N_TOKEN})
         
         if response.status_code == 200:
             print(f"Sent data: {data['sgv']} mg/dL ✔️")
