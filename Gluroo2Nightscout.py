@@ -1,9 +1,6 @@
 import os
 import requests
 import time
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Load environment variables
 GLUROO_API_URL = os.getenv("GLUROO_API_URL")
