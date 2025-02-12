@@ -1,11 +1,20 @@
 import os
 import requests
 import time
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Load environment variables
 GLUROO_API_URL = os.getenv("GLUROO_API_URL")
 NIGHTSCOUT_URL = os.getenv("NIGHTSCOUT_URL")
 GLUROO_TOKEN = os.getenv("GLUROO_TOKEN")
+
+print("🚀 Script is starting...")
+print("🔍 Checking environment variables...")
+print(f"GLUROO_API_URL: {os.getenv('GLUROO_API_URL')}")
+print(f"NIGHTSCOUT_URL: {os.getenv('NIGHTSCOUT_URL')}")
+print(f"GLUROO_TOKEN: {os.getenv('GLUROO_TOKEN')}")
 
 def fetch_glucose_data():
     """Fetch glucose data from Gluroo API."""
