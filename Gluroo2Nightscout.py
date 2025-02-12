@@ -3,9 +3,9 @@ import time
 import os
 
 # API Configuration
-GLUROO_API_URL = os.getenv("GLUROO_API_URL")
-NIGHTSCOUT_URL = os.getenv("NIGHTSCOUT_URL")
-TOKEN = os.getenv("TOKEN")
+G2N_GLUROO_API_URL = os.getenv("GLUROO_API_URL")
+G2N_NIGHTSCOUT_URL = os.getenv("NIGHTSCOUT_URL")
+G2N_TOKEN = os.getenv("TOKEN")
 
 # Error message mapping
 ERROR_MESSAGES = {
